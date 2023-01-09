@@ -11,7 +11,7 @@ const DegreList = () => {
       })}
 
       <br />
-      <button onClick={createDegre}>Add Degre</button>
+      <button onClick={createDegre} className="bg-green-400 p-2 rounded-md hover:bg-green-300 mb-3 w-full">Add Degre</button>
     </div>
   );
 };

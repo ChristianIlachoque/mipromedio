@@ -4,7 +4,7 @@ import { createContext, useEffect, useState } from "react";
 export const DegreContext = createContext();
 
 const DegreContextProvider = (props) => {
-  const [acurance, setAcurance] = useState(0.0);
+  const [average, setAcurance] = useState(0.0);
   const [degres, setDegres] = useState([]);
 
   // useEffect(() => {
@@ -19,9 +19,9 @@ const DegreContextProvider = (props) => {
       let x_value = Number(degre.value);
       let x_porcent = Number(degre.porcent);
 
-      let x_acurance = 0;
-      x_acurance = (x_value * x_porcent) / 100;
-      amount += x_acurance;
+      let x_average = 0;
+      x_average = (x_value * x_porcent) / 100;
+      amount += x_average;
     });
     console.log("Amount", amount);
     return amount;
@@ -63,7 +63,7 @@ const DegreContextProvider = (props) => {
         createDegre,
         deleteDegre,
         editDegre,
-        acurance,
+        average,
       }}
     >
       {props.children}
